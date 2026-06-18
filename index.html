@@ -44,6 +44,7 @@ section { padding: 90px 0; }
 .service-card ul { list-style: none; font-size: 13px; color: #5A7A9A; }
 .service-card li { padding: 6px 0 6px 22px; position: relative; line-height: 1.6; }
 .service-card li::before { content: ""; position: absolute; left: 0; top: 13px; width: 14px; height: 2px; background: #00B3A6; border-radius: 2px; }
+.service-card li b { color: #0F2540; font-weight: 700; }
 .about { background: #F5F8FC; }
 .about-content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
 .about-text h2 { font-size: 32px; color: #0F2540; margin-bottom: 24px; line-height: 1.4; font-weight: 700; }
@@ -78,7 +79,6 @@ section { padding: 90px 0; }
 footer { background: #0A1A2B; color: #7A92AB; padding: 40px 0 32px; text-align: center; font-size: 13px; }
 footer .f-logo { color: #fff; font-weight: 700; margin-bottom: 6px; font-size: 15px; }
 footer .f-slogan { font-size: 12px; opacity: 0.7; margin-bottom: 8px; }
-.service-card li b { color: #0F2540; font-weight: 700; }
 @media (max-width: 768px) { .hero h1 { font-size: 30px; letter-spacing: -0.3px; } .hero { padding: 60px 0 50px; } .hero p.sub { font-size: 15px; margin-bottom: 28px; line-height: 1.7; } .service-grid, .about-content, .method-grid { grid-template-columns: 1fr; } .service-card { padding: 28px 20px; } .service-card p { font-size: 13px; line-height: 1.7; margin-bottom: 16px; } .service-card li { font-size: 12.5px; line-height: 1.6; padding: 5px 0 5px 20px; } .service-card li::before { top: 12px; width: 12px; } .section-head h2 { font-size: 26px; } .section-head p { font-size: 14px; line-height: 1.7; } .about-text h2 { font-size: 24px; line-height: 1.35; } .about-text p { font-size: 14px; line-height: 1.8; } .stat { padding: 14px 16px; } .stat .num { font-size: 22px; } .stat .label { font-size: 11.5px; } .method-step { padding: 28px 20px; } .method-step .num { font-size: 36px; } .method-step h4 { font-size: 16px; } .method-step p { font-size: 12.5px; line-height: 1.7; } .contact { padding: 60px 20px; } .contact h2 { font-size: 26px; } .contact p { font-size: 14.5px; line-height: 1.7; } .btn { padding: 12px 24px; font-size: 14px; } .nav ul { display: none; } section { padding: 50px 0; } }
 </style>
 </head>
@@ -99,9 +99,9 @@ footer .f-slogan { font-size: 12px; opacity: 0.7; margin-bottom: 8px; }
 <section id="services"><div class="container">
   <div class="section-head"><span class="eyebrow">OUR SERVICES · 核心服务</span><h2>三类客户场景，一样的落地方法论</h2><p>基于 FDE（Forward Deployed Engineer）前沿部署方法论，为不同场景交付可衡量价值的 AI 应用</p></div>
   <div class="service-grid">
-    <div class="service-card"><div class="service-icon">��️</div><h3>政府与基层治理</h3><p>聚焦基层治理场景，用 AI 为街道、社区、中小政府单位减轻重复性工作负担</p><ul><li><b>数据挖掘与分析利用</b> — 从多源数据中发现关键趋势和洞察，自动生成分析简报</li><li><b>基层治理智能工具箱</b> — 面向街道、社区的日常工作辅助工具集，覆盖常见治理场景</li><li><b>跨系统信息搜集与智能填报</b> — 自动汇总多系统数据，智能识别报表格式并完成填报</li><li><b>政策知识整理与智能应用</b> — 政策文件智能检索与引用，让政策随时可用、随时可查</li><li>私有化部署，数据不出内网</li><li>国产大模型灵活适配</li><li>内容安全与引用溯源</li></ul></div>
-    <div class="service-card"><div class="service-icon">��</div><h3>企业协同与数据处理</h3><p>面向国企和中小微企业，把 AI 嵌入数据处理和协同流程，让繁琐工作自动完成</p><ul><li>企业私有知识库，让知识不再散落在各处</li><li>数据智能处理与分析，告别手工统计</li><li>合同文档智能检索，找条款不再翻半天</li><li>销售客服智能助手，响应客户更快速</li><li>跨部门协同流程自动化，减少重复沟通</li><li>多端可用（Web/微信/钉钉/飞书）</li><li>轻量部署，快速上线，按需付费</li></ul></div>
-    <div class="service-card"><div class="service-icon">�</div><h3>超级个体定制</h3><p>面向拥有丰富专业知识的超级个体，提供深度定制化的 AI 应用，让 AI 成为您的专属专业伙伴</p><ul><li>个人专属知识助理</li><li>深度定制化 AI 工具</li><li>专业场景深度适配</li><li>私有知识库个性化训练</li><li>一对一咨询式服务</li><li>灵活的技术栈选择</li><li>持续迭代优化</li></ul></div>
+    <div class="service-card"><div class="service-icon">🏘️</div><h3>政府与基层治理</h3><p>聚焦基层治理场景，用 AI 为街道、社区、中小政府单位减轻重复性工作负担</p><ul><li><b>数据挖掘与分析利用</b> - 从多源数据中发现关键趋势和洞察，自动生成分析简报</li><li><b>基层治理智能工具箱</b> - 面向街道、社区的日常工作辅助工具集，覆盖常见治理场景</li><li><b>跨系统信息搜集与智能填报</b> - 自动汇总多系统数据，智能识别报表格式并完成填报</li><li><b>政策知识整理与智能应用</b> - 政策文件智能检索与引用，让政策随时可用、随时可查</li><li>私有化部署，数据不出内网</li><li>国产大模型灵活适配</li><li>内容安全与引用溯源</li></ul></div>
+    <div class="service-card"><div class="service-icon">🏢</div><h3>企业协同与数据处理</h3><p>面向国企和中小微企业，把 AI 嵌入数据处理和协同流程，让繁琐工作自动完成</p><ul><li>企业私有知识库，让知识不再散落在各处</li><li>数据智能处理与分析，告别手工统计</li><li>合同文档智能检索，找条款不再翻半天</li><li>销售客服智能助手，响应客户更快速</li><li>跨部门协同流程自动化，减少重复沟通</li><li>多端可用（Web/微信/钉钉/飞书）</li><li>轻量部署，快速上线，按需付费</li></ul></div>
+    <div class="service-card"><div class="service-icon">👤</div><h3>超级个体定制</h3><p>面向拥有丰富专业知识的超级个体，提供深度定制化的 AI 应用，让 AI 成为您的专属专业伙伴</p><ul><li>个人专属知识助理</li><li>深度定制化 AI 工具</li><li>专业场景深度适配</li><li>私有知识库个性化训练</li><li>一对一咨询式服务</li><li>灵活的技术栈选择</li><li>持续迭代优化</li></ul></div>
   </div>
 </div></section>
 
