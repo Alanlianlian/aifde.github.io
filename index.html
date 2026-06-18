@@ -4,248 +4,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>广州艾富迪易科技有限公司 | 业务型 AI 前沿部署服务商</title>
-<meta name="description" content="艾富迪易是一家业务型 AI 前沿部署服务商，专注为政府、社区与中小微企业交付可衡量价值的 AI 应用。">
+<meta name="description" content="艾富迪易是一家业务型 AI 前沿部署服务商，专注为政府基层治理、企业协同与超级个体交付可衡量价值的 AI 应用。">
 <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.7;
-    color: #2C3E50;
-    background: #fff;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-  header {
-    padding: 18px 0;
-    border-bottom: 1px solid #E4EBF3;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: saturate(180%) blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .nav { display: flex; justify-content: space-between; align-items: center; }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .logo img { height: 40px; width: auto; display: block; }
-  .nav ul { display: flex; gap: 34px; list-style: none; }
-  .nav a { text-decoration: none; color: #5A7A9A; font-size: 15px; transition: color 0.2s; font-weight: 500; }
-  .nav a:hover { color: #1E5AA8; }
-  .hero {
-    padding: 100px 0 90px;
-    background: radial-gradient(circle at 15% 20%, rgba(46,196,182,0.08) 0%, transparent 40%), radial-gradient(circle at 85% 80%, rgba(30,90,168,0.08) 0%, transparent 40%), linear-gradient(135deg, #F5F8FC 0%, #E8F1FA 100%);
-  }
-  .hero-content { max-width: 760px; }
-  .tag {
-    display: inline-block; padding: 8px 18px; background: #fff; border: 1px solid #E4EBF3;
-    border-radius: 999px; color: #1E5AA8; font-size: 13px; font-weight: 600; letter-spacing: 1px;
-    margin-bottom: 28px; box-shadow: 0 2px 8px rgba(30,90,168,0.06);
-  }
-  .hero h1 { font-size: 48px; font-weight: 700; color: #0F2540; line-height: 1.3; margin-bottom: 24px; letter-spacing: -0.5px; }
-  .hero h1 .highlight {
-    background: linear-gradient(135deg, #1E5AA8 0%, #00B3A6 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  }
-  .hero p.sub { font-size: 18px; color: #5A7A9A; margin-bottom: 40px; line-height: 1.8; }
-  .btn-group { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn {
-    display: inline-block; padding: 15px 32px; background: #1E5AA8; color: #fff;
-    text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: 600;
-    transition: all 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(30,90,168,0.25);
-  }
-  .btn:hover { background: #1A4E8F; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,90,168,0.35); }
-  .btn.secondary { background: #fff; color: #1E5AA8; border: 1px solid #CFDCEB; box-shadow: none; }
-  .btn.secondary:hover { background: #F5F8FC; border-color: #1E5AA8; }
-  section { padding: 90px 0; }
-  .section-head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
-  .section-head .eyebrow { display: inline-block; font-size: 12px; color: #00B3A6; font-weight: 600; letter-spacing: 3px; margin-bottom: 14px; text-transform: uppercase; }
-  .section-head h2 { font-size: 36px; font-weight: 700; color: #0F2540; margin-bottom: 16px; letter-spacing: -0.3px; }
-  .section-head p { color: #5A7A9A; font-size: 16px; line-height: 1.8; }
-  .services { background: #fff; }
-  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .service-card {
-    background: #fff; padding: 40px 32px; border-radius: 14px; border: 1px solid #E4EBF3;
-    transition: all 0.25s; position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, #1E5AA8 0%, #00B3A6 100%); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
-  }
-  .service-card:hover { transform: translateY(-4px); border-color: #CFDCEB; box-shadow: 0 12px 32px rgba(15,37,64,0.08); }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-icon { width: 54px; height: 54px; background: linear-gradient(135deg, #E8F1FA 0%, #E0F5F2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 22px; }
-  .service-card h3 { font-size: 20px; color: #0F2540; margin-bottom: 12px; font-weight: 700; }
-  .service-card p { color: #5A7A9A; font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
-  .service-card ul { list-style: none; font-size: 13px; color: #5A7A9A; }
-  .service-card li { padding: 6px 0 6px 22px; position: relative; line-height: 1.6; }
-  .service-card li::before { content: ''; position: absolute; left: 0; top: 13px; width: 14px; height: 2px; background: #00B3A6; border-radius: 2px; }
-  .about { background: #F5F8FC; }
-  .about-content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
-  .about-text h2 { font-size: 32px; color: #0F2540; margin-bottom: 24px; line-height: 1.4; font-weight: 700; letter-spacing: -0.3px; }
-  .about-text p { color: #5A7A9A; font-size: 16px; margin-bottom: 16px; line-height: 1.9; }
-  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
-  .stat { padding: 20px 22px; background: #fff; border-radius: 10px; border-left: 3px solid #1E5AA8; }
-  .stat .num { font-size: 28px; font-weight: 700; color: #0F2540; }
-  .stat .label { color: #5A7A9A; font-size: 13px; margin-top: 4px; }
-  .about-visual { background: linear-gradient(140deg, #1E5AA8 0%, #0F2540 100%); border-radius: 16px; padding: 44px 40px; color: #fff; box-shadow: 0 20px 60px rgba(15,37,64,0.25); }
-  .about-visual .method-label { font-size: 12px; opacity: 0.7; margin-bottom: 10px; letter-spacing: 3px; font-weight: 600; }
-  .about-visual h3 { font-size: 22px; margin-bottom: 28px; line-height: 1.5; font-weight: 600; }
-  .step { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; gap: 20px; }
-  .step:last-child { border-bottom: none; }
-  .step-num { font-size: 14px; font-weight: 700; min-width: 30px; color: #2EC4B6; letter-spacing: 1px; }
-  .step-content .title { font-size: 15px; font-weight: 500; }
-  .step-content .desc { font-size: 12px; opacity: 0.65; margin-top: 2px; }
-  .method-section { background: #fff; }
-  .method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .method-step { text-align: center; padding: 36px 24px; background: #F5F8FC; border-radius: 12px; transition: all 0.25s; }
-  .method-step:hover { background: #fff; box-shadow: 0 8px 24px rgba(15,37,64,0.08); transform: translateY(-3px); }
-  .method-step .num { font-size: 44px; font-weight: 700; color: #1E5AA8; margin-bottom: 8px; line-height: 1; opacity: 0.25; }
-  .method-step h4 { font-size: 17px; color: #0F2540; margin-bottom: 12px; font-weight: 700; }
-  .method-step p { font-size: 13px; color: #5A7A9A; line-height: 1.7; }
-  .method-step .period { display: inline-block; margin-top: 16px; padding: 4px 14px; background: #E8F1FA; color: #1E5AA8; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; }
-  .contact { background: linear-gradient(135deg, #0F2540 0%, #1E5AA8 100%); color: #fff; text-align: center; padding: 90px 24px; }
-  .contact h2 { font-size: 36px; margin-bottom: 18px; font-weight: 700; letter-spacing: -0.3px; }
-  .contact p { font-size: 17px; opacity: 0.85; margin-bottom: 40px; }
-  .contact .btn { background: #fff; color: #1E5AA8; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-  .contact .btn:hover { background: #2EC4B6; color: #fff; box-shadow: 0 10px 28px rgba(46,196,182,0.35); }
-  .contact-info { display: flex; justify-content: center; gap: 48px; margin-top: 48px; flex-wrap: wrap; }
-  .contact-item { font-size: 14px; }
-  .contact-item .label { display: block; font-size: 11px; opacity: 0.55; margin-bottom: 4px; letter-spacing: 2px; font-weight: 600; }
-  footer { background: #0A1A2B; color: #7A92AB; padding: 40px 0 32px; text-align: center; font-size: 13px; }
-  footer .f-logo { color: #fff; font-weight: 700; margin-bottom: 6px; font-size: 15px; }
-  footer .f-slogan { font-size: 12px; opacity: 0.7; margin-bottom: 8px; }
-  @media (max-width: 768px) {
-    .hero h1 { font-size: 32px; } .hero p.sub { font-size: 16px; } .hero { padding: 70px 0 60px; }
-    .service-grid, .about-content, .method-grid { grid-template-columns: 1fr; }
-    .nav ul { display: none; } section { padding: 60px 0; } .section-head h2 { font-size: 28px; } .stats { grid-template-columns: 1fr 1fr; }
-  }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; color: #2C3E50; background: #fff; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+header { padding: 18px 0; border-bottom: 1px solid #E4EBF3; background: rgba(255,255,255,0.95); position: sticky; top: 0; z-index: 100; }
+.nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo img { height: 44px; width: auto; }
+.nav ul { display: flex; gap: 34px; list-style: none; }
+.nav a { text-decoration: none; color: #5A7A9A; font-size: 15px; transition: color 0.2s; font-weight: 500; }
+.nav a:hover { color: #1E5AA8; }
+.hero { padding: 100px 0 90px; background: radial-gradient(circle at 15% 20%, rgba(46,196,182,0.08) 0%, transparent 40%), radial-gradient(circle at 85% 80%, rgba(30,90,168,0.08) 0%, transparent 40%), linear-gradient(135deg, #F5F8FC 0%, #E8F1FA 100%); }
+.hero-content { max-width: 760px; }
+.tag { display: inline-block; padding: 8px 18px; background: #fff; border: 1px solid #E4EBF3; border-radius: 999px; color: #1E5AA8; font-size: 13px; font-weight: 600; letter-spacing: 1px; margin-bottom: 28px; }
+.hero h1 { font-size: 48px; font-weight: 700; color: #0F2540; line-height: 1.3; margin-bottom: 24px; letter-spacing: -0.5px; }
+.hero h1 .hl { background: linear-gradient(135deg, #1E5AA8 0%, #00B3A6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero p.sub { font-size: 18px; color: #5A7A9A; margin-bottom: 40px; line-height: 1.8; }
+.btn-group { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 15px 32px; background: #1E5AA8; color: #fff; text-decoration: none; border-radius: 8px; font-size: 15px; font-weight: 600; transition: all 0.2s; box-shadow: 0 4px 14px rgba(30,90,168,0.25); }
+.btn:hover { background: #1A4E8F; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,90,168,0.35); }
+.btn.sec { background: #fff; color: #1E5AA8; border: 1px solid #CFDCEB; box-shadow: none; }
+.btn.sec:hover { background: #F5F8FC; border-color: #1E5AA8; }
+section { padding: 90px 0; }
+.section-head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+.section-head .eyebrow { display: inline-block; font-size: 12px; color: #00B3A6; font-weight: 600; letter-spacing: 3px; margin-bottom: 14px; }
+.section-head h2 { font-size: 36px; font-weight: 700; color: #0F2540; margin-bottom: 16px; letter-spacing: -0.3px; }
+.section-head p { color: #5A7A9A; font-size: 16px; line-height: 1.8; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-card { background: #fff; padding: 40px 32px; border-radius: 14px; border: 1px solid #E4EBF3; transition: all 0.25s; position: relative; overflow: hidden; }
+.service-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #1E5AA8 0%, #00B3A6 100%); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+.service-card:hover { transform: translateY(-4px); border-color: #CFDCEB; box-shadow: 0 12px 32px rgba(15,37,64,0.08); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { width: 54px; height: 54px; background: linear-gradient(135deg, #E8F1FA 0%, #E0F5F2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 22px; }
+.service-card h3 { font-size: 20px; color: #0F2540; margin-bottom: 12px; font-weight: 700; }
+.service-card p { color: #5A7A9A; font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
+.service-card ul { list-style: none; font-size: 13px; color: #5A7A9A; }
+.service-card li { padding: 6px 0 6px 22px; position: relative; line-height: 1.6; }
+.service-card li::before { content: ""; position: absolute; left: 0; top: 13px; width: 14px; height: 2px; background: #00B3A6; border-radius: 2px; }
+.about { background: #F5F8FC; }
+.about-content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items: center; }
+.about-text h2 { font-size: 32px; color: #0F2540; margin-bottom: 24px; line-height: 1.4; font-weight: 700; }
+.about-text p { color: #5A7A9A; font-size: 16px; margin-bottom: 16px; line-height: 1.9; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+.stat { padding: 20px 22px; background: #fff; border-radius: 10px; border-left: 3px solid #1E5AA8; }
+.stat .num { font-size: 28px; font-weight: 700; color: #0F2540; }
+.stat .label { color: #5A7A9A; font-size: 13px; margin-top: 4px; }
+.about-visual { background: linear-gradient(140deg, #1E5AA8 0%, #0F2540 100%); border-radius: 16px; padding: 44px 40px; color: #fff; box-shadow: 0 20px 60px rgba(15,37,64,0.25); }
+.about-visual .mlabel { font-size: 12px; opacity: 0.7; margin-bottom: 10px; letter-spacing: 3px; font-weight: 600; }
+.about-visual h3 { font-size: 22px; margin-bottom: 28px; line-height: 1.5; font-weight: 600; }
+.step { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; align-items: center; gap: 20px; }
+.step:last-child { border-bottom: none; }
+.step-num { font-size: 14px; font-weight: 700; min-width: 30px; color: #2EC4B6; letter-spacing: 1px; }
+.step-content .title { font-size: 15px; font-weight: 500; }
+.step-content .desc { font-size: 12px; opacity: 0.65; margin-top: 2px; }
+.method-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.method-step { text-align: center; padding: 36px 24px; background: #F5F8FC; border-radius: 12px; transition: all 0.25s; }
+.method-step:hover { background: #fff; box-shadow: 0 8px 24px rgba(15,37,64,0.08); transform: translateY(-3px); }
+.method-step .num { font-size: 44px; font-weight: 700; color: #1E5AA8; margin-bottom: 8px; line-height: 1; opacity: 0.25; }
+.method-step h4 { font-size: 17px; color: #0F2540; margin-bottom: 12px; font-weight: 700; }
+.method-step p { font-size: 13px; color: #5A7A9A; line-height: 1.7; }
+.method-step .period { display: inline-block; margin-top: 16px; padding: 4px 14px; background: #E8F1FA; color: #1E5AA8; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.contact { background: linear-gradient(135deg, #0F2540 0%, #1E5AA8 100%); color: #fff; text-align: center; padding: 90px 24px; }
+.contact h2 { font-size: 36px; margin-bottom: 18px; font-weight: 700; }
+.contact p { font-size: 17px; opacity: 0.85; margin-bottom: 40px; }
+.contact .btn { background: #fff; color: #1E5AA8; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.contact .btn:hover { background: #2EC4B6; color: #fff; }
+.contact-info { display: flex; justify-content: center; gap: 48px; margin-top: 48px; flex-wrap: wrap; }
+.contact-item { font-size: 14px; }
+.contact-item .label { display: block; font-size: 11px; opacity: 0.55; margin-bottom: 4px; letter-spacing: 2px; font-weight: 600; }
+footer { background: #0A1A2B; color: #7A92AB; padding: 40px 0 32px; text-align: center; font-size: 13px; }
+footer .f-logo { color: #fff; font-weight: 700; margin-bottom: 6px; font-size: 15px; }
+footer .f-slogan { font-size: 12px; opacity: 0.7; margin-bottom: 8px; }
+.service-card li b { color: #0F2540; font-weight: 700; }
+@media (max-width: 768px) { .hero h1 { font-size: 30px; letter-spacing: -0.3px; } .hero { padding: 60px 0 50px; } .hero p.sub { font-size: 15px; margin-bottom: 28px; line-height: 1.7; } .service-grid, .about-content, .method-grid { grid-template-columns: 1fr; } .service-card { padding: 28px 20px; } .service-card p { font-size: 13px; line-height: 1.7; margin-bottom: 16px; } .service-card li { font-size: 12.5px; line-height: 1.6; padding: 5px 0 5px 20px; } .service-card li::before { top: 12px; width: 12px; } .section-head h2 { font-size: 26px; } .section-head p { font-size: 14px; line-height: 1.7; } .about-text h2 { font-size: 24px; line-height: 1.35; } .about-text p { font-size: 14px; line-height: 1.8; } .stat { padding: 14px 16px; } .stat .num { font-size: 22px; } .stat .label { font-size: 11.5px; } .method-step { padding: 28px 20px; } .method-step .num { font-size: 36px; } .method-step h4 { font-size: 16px; } .method-step p { font-size: 12.5px; line-height: 1.7; } .contact { padding: 60px 20px; } .contact h2 { font-size: 26px; } .contact p { font-size: 14.5px; line-height: 1.7; } .btn { padding: 12px 24px; font-size: 14px; } .nav ul { display: none; } section { padding: 50px 0; } }
 </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a href="#" class="logo" aria-label="艾富迪易科技"><img src="logo.svg" alt="艾富迪易 Logo"></a>
-    <ul>
-      <li><a href="#services">服务内容</a></li>
-      <li><a href="#about">关于我们</a></li>
-      <li><a href="#method">服务流程</a></li>
-      <li><a href="#contact">联系我们</a></li>
-    </ul>
+
+<header><div class="container nav">
+  <a href="#" class="logo"><img src="logo.svg" alt="艾富迪易"></a>
+  <ul><li><a href="#services">服务内容</a></li><li><a href="#about">关于我们</a></li><li><a href="#method">服务流程</a></li><li><a href="#contact">联系我们</a></li></ul>
+</div></header>
+
+<section class="hero"><div class="container"><div class="hero-content">
+  <span class="tag">AI · FDE · 业务型前沿部署</span>
+  <h1>把大模型 <span class="hl">嵌入你的业务流程</span><br>让 AI 从能聊天，变得能干活</h1>
+  <p class="sub">面向政府治理、企业协同与超级个体，提供从需求诊断到系统落地的端到端 AI 服务。不卖 API，只交付可衡量价值的应用。</p>
+  <div class="btn-group"><a href="#contact" class="btn">咨询合作</a><a href="#services" class="btn sec">了解服务</a></div>
+</div></div></section>
+
+<section id="services"><div class="container">
+  <div class="section-head"><span class="eyebrow">OUR SERVICES · 核心服务</span><h2>三类客户场景，一样的落地方法论</h2><p>基于 FDE（Forward Deployed Engineer）前沿部署方法论，为不同场景交付可衡量价值的 AI 应用</p></div>
+  <div class="service-grid">
+    <div class="service-card"><div class="service-icon">��️</div><h3>政府与基层治理</h3><p>聚焦基层治理场景，用 AI 为街道、社区、中小政府单位减轻重复性工作负担</p><ul><li><b>数据挖掘与分析利用</b> — 从多源数据中发现关键趋势和洞察，自动生成分析简报</li><li><b>基层治理智能工具箱</b> — 面向街道、社区的日常工作辅助工具集，覆盖常见治理场景</li><li><b>跨系统信息搜集与智能填报</b> — 自动汇总多系统数据，智能识别报表格式并完成填报</li><li><b>政策知识整理与智能应用</b> — 政策文件智能检索与引用，让政策随时可用、随时可查</li><li>私有化部署，数据不出内网</li><li>国产大模型灵活适配</li><li>内容安全与引用溯源</li></ul></div>
+    <div class="service-card"><div class="service-icon">��</div><h3>企业协同与数据处理</h3><p>面向国企和中小微企业，把 AI 嵌入数据处理和协同流程，让繁琐工作自动完成</p><ul><li>企业私有知识库，让知识不再散落在各处</li><li>数据智能处理与分析，告别手工统计</li><li>合同文档智能检索，找条款不再翻半天</li><li>销售客服智能助手，响应客户更快速</li><li>跨部门协同流程自动化，减少重复沟通</li><li>多端可用（Web/微信/钉钉/飞书）</li><li>轻量部署，快速上线，按需付费</li></ul></div>
+    <div class="service-card"><div class="service-icon">�</div><h3>超级个体定制</h3><p>面向拥有丰富专业知识的超级个体，提供深度定制化的 AI 应用，让 AI 成为您的专属专业伙伴</p><ul><li>个人专属知识助理</li><li>深度定制化 AI 工具</li><li>专业场景深度适配</li><li>私有知识库个性化训练</li><li>一对一咨询式服务</li><li>灵活的技术栈选择</li><li>持续迭代优化</li></ul></div>
   </div>
-</header>
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="tag">AI · FDE · 业务型前沿部署</span>
-      <h1>把大模型<span class="highlight"> 嵌进你的业务流程</span><br>让 AI 从能聊天，变得能干活</h1>
-      <p class="sub">面向政府机构、社区治理与中小微企业，提供从需求诊断到系统落地的端到端 AI 服务。不卖 API，只交付可衡量价值的应用。</p>
-      <div class="btn-group">
-        <a href="#contact" class="btn">咨询合作</a>
-        <a href="#services" class="btn secondary">了解服务</a>
-      </div>
-    </div>
+</div></section>
+
+<section id="about" class="about"><div class="container"><div class="about-content">
+  <div class="about-text">
+    <h2>AI 的价值不在模型本身，而在它如何嵌入你的工作流</h2>
+    <p>大模型公司已经把模型做得足够好了。但从能聊天的 API 到能在你业务中真正省时间的系统，中间隔着一道看不见的桥。</p>
+    <p>艾富迪易专注于这座桥。我们以业务型 FDE 为方法论，进驻客户现场理解业务，把 AI 从看起来很厉害变成每天都在用。</p>
+    <div class="stats"><div class="stat"><div class="num">7天</div><div class="label">标准系统上线周期</div></div><div class="stat"><div class="num">4步</div><div class="label">标准化服务流程</div></div><div class="stat"><div class="num">100%</div><div class="label">可选私有化部署</div></div><div class="stat"><div class="num">3类</div><div class="label">核心客户场景</div></div></div>
   </div>
-</section>
-<section id="services" class="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">OUR SERVICES · 核心服务</span>
-      <h2>三类客户场景，一样的落地方法论</h2>
-      <p>基于 FDE（Forward Deployed Engineer）前沿部署方法论，为不同场景交付可衡量价值的 AI 应用</p>
-    </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <div class="service-icon">🏛️</div>
-        <h3>政府与国企</h3>
-        <p>政务知识问答系统、政策文件智能检索、门户网站智能客服</p>
-        <ul>
-          <li>私有化部署 · 数据不出内网</li>
-          <li>国产大模型灵活适配</li>
-          <li>内容安全与引用溯源</li>
-          <li>与现有业务系统无缝集成</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🏘️</div>
-        <h3>社区治理</h3>
-        <p>社区办事智能助手、网格员工作辅助系统</p>
-        <ul>
-          <li>免培训即可使用</li>
-          <li>本地化办事指南</li>
-          <li>7×24 小时在线服务</li>
-          <li>粤语 / 普通话双语支持</li>
-        </ul>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">💼</div>
-        <h3>中小微企业</h3>
-        <p>企业私域知识库、销售客服助手、合同智能检索</p>
-        <ul>
-          <li>轻量部署 · 一周上线</li>
-          <li>按需付费 · 零硬门槛</li>
-          <li>多端可用（Web/微信/钉钉/飞书）</li>
-          <li>新人培训效率显著提升</li>
-        </ul>
-      </div>
-    </div>
+  <div class="about-visual"><div class="mlabel">FDE · METHODOLOGY</div><h3>以业务为起点<br>以落地为终点</h3>
+    <div class="step"><div class="step-num">01</div><div class="step-content"><div class="title">诊断痛点</div><div class="desc">从业务出发锁定可落地场景</div></div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-content"><div class="title">知识梳理</div><div class="desc">把散乱的知识变成结构化数据</div></div></div>
+    <div class="step"><div class="step-num">03</div><div class="step-content"><div class="title">系统部署</div><div class="desc">搭建 RAG + 大模型问答系统</div></div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-content"><div class="title">持续优化</div><div class="desc">基于使用数据持续迭代提升</div></div></div>
   </div>
-</section>
-<section id="about" class="about">
-  <div class="container">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>AI 的价值不在模型本身，<br>而在它如何嵌入你的工作流程</h2>
-        <p>大模型公司已经把模型做得足够好了。但从"能聊天的 API"到"能在你业务中真正省时间的系统"，中间隔着一道看不见的桥。</p>
-        <p>艾富迪易专注于这道桥。我们以"业务型 FDE"为方法论，进驻客户现场理解业务，把 AI 从"看起来很厉害"变成"每天都在用"。</p>
-        <div class="stats">
-          <div class="stat"><div class="num">7天</div><div class="label">标准系统上线周期</div></div>
-          <div class="stat"><div class="num">4步</div><div class="label">标准化服务流程</div></div>
-          <div class="stat"><div class="num">100%</div><div class="label">可选私有化部署</div></div>
-          <div class="stat"><div class="num">3类</div><div class="label">核心客户场景</div></div>
-        </div>
-      </div>
-      <div class="about-visual">
-        <div class="method-label">FDE · METHODOLOGY</div>
-        <h3>以业务为起点<br>以落地为终点</h3>
-        <div class="step"><div class="step-num">01</div><div class="step-content"><div class="title">诊断痛点</div><div class="desc">从业务出发锁定可落地场景</div></div></div>
-        <div class="step"><div class="step-num">02</div><div class="step-content"><div class="title">知识梳理</div><div class="desc">把散落的知识变成结构化数据</div></div></div>
-        <div class="step"><div class="step-num">03</div><div class="step-content"><div class="title">系统部署</div><div class="desc">搭建 RAG + 大模型问答系统</div></div></div>
-        <div class="step"><div class="step-num">04</div><div class="step-content"><div class="title">持续优化</div><div class="desc">基于使用数据持续迭代提升</div></div></div>
-      </div>
-    </div>
+</div></div></section>
+
+<section id="method"><div class="container">
+  <div class="section-head"><span class="eyebrow">PROCESS · 服务流程</span><h2>四步闭环，让 AI 从想法到落地</h2><p>基于 Forward Deployed Engineer 方法论的标准化交付流程</p></div>
+  <div class="method-grid">
+    <div class="method-step"><div class="num">01</div><h4>诊断痛点</h4><p>通过访谈和流程观察，把想用 AI 变成具体的可落地场景</p><span class="period">约 1-2 周</span></div>
+    <div class="method-step"><div class="num">02</div><h4>知识梳理</h4><p>协助客户把散落在各处的文档、经验、流程整理成结构化知识库</p><span class="period">约 2-4 周</span></div>
+    <div class="method-step"><div class="num">03</div><h4>系统部署</h4><p>搭建 RAG + 大模型的智能问答系统，对接客户现有 IT 基础设施</p><span class="period">约 1-2 周</span></div>
+    <div class="method-step"><div class="num">04</div><h4>持续优化</h4><p>通过使用数据分析、用户反馈收集，持续优化答案质量与覆盖场景</p><span class="period">持续进行</span></div>
   </div>
-</section>
-<section id="method" class="method-section">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">PROCESS · 服务流程</span>
-      <h2>四步闭环，让 AI 从想法到落地</h2>
-      <p>基于 Forward Deployed Engineer 方法论的标准化交付流程</p>
-    </div>
-    <div class="method-grid">
-      <div class="method-step"><div class="num">01</div><h4>诊断痛点</h4><p>通过访谈和流程观察，把"想用 AI"变成具体的可落地场景</p><span class="period">约 1-2 周</span></div>
-      <div class="method-step"><div class="num">02</div><h4>知识梳理</h4><p>协助客户把散落在各处的文档、经验、流程整理成结构化知识库</p><span class="period">约 2-4 周</span></div>
-      <div class="method-step"><div class="num">03</div><h4>系统部署</h4><p>搭建 RAG + 大模型的智能问答系统，对接客户现有 IT 基础设施</p><span class="period">约 1-2 周</span></div>
-      <div class="method-step"><div class="num">04</div><h4>持续优化</h4><p>通过使用数据分析、用户反馈收集，持续优化答案质量与覆盖场景</p><span class="period">持续进行</span></div>
-    </div>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>准备让 AI 真正嵌入你的业务了吗？</h2>
-    <p>告诉我你的业务场景，我们一起判断 AI 能帮你做什么，怎么做。</p>
-    <a href="mailto:764083706@qq.com" class="btn">发送邮件或QQ咨询</a>
-    <div class="contact-info">
-      <div class="contact-item"><span class="label">EMAIL</span>764083706@qq.com</div>
-      <div class="contact-item"><span class="label">LOCATION</span>广州 · 全国服务</div>
-      <div class="contact-item"><span class="label">SERVICE</span>政府 / 社区 / 企业</div>
-    </div>
-  </div>
-</section>
-<footer>
-  <div class="f-logo">广州艾富迪易科技有限公司</div>
-  <div class="f-slogan">AI-FDE Tech · 让 AI 变得对你有用，对你容易</div>
-  <div>&copy; 2026 艾富迪易科技 保留所有权利</div>
-</footer>
+</div></section>
+
+<section id="contact" class="contact"><div class="container">
+  <h2>准备让 AI 真正嵌入你的业务了吗？</h2>
+  <p>告诉我你的业务场景，我们一起判断 AI 能帮你做什么，怎么做。</p>
+  <a href="mailto:764083706@qq.com" class="btn">发送邮件咨询</a>
+  <div class="contact-info"><div class="contact-item"><span class="label">EMAIL</span>764083706@qq.com</div><div class="contact-item"><span class="label">LOCATION</span>广州 · 全国服务</div><div class="contact-item"><span class="label">SERVICE</span>政府 / 企业 / 超级个体</div></div>
+</div></section>
+
+<footer><div class="f-logo">广州艾富迪易科技有限公司</div><div class="f-slogan">AI-FDE Tech · 让 AI 变得对你有用，更易</div><div>&copy; 2026 艾富迪易科技 保留所有权利</div></footer>
 </body>
-                                                       </html>
+</html>
